@@ -48,8 +48,8 @@ GYAAN-AI is an intelligent learning management system that uses 5 AI agents to e
 ### Backend
 - Python 3.11+
 - FastAPI
-- SQLAlchemy
-- LangChain + OpenAI
+- Postgresql
+- Groq Powered Local Intelligence
 
 ## 🚀 Quick Start
 
