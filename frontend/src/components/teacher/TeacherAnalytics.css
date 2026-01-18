@@ -1,0 +1,282 @@
+/* TeacherAnalytics - Premium Professional Styles */
+
+/* Analytics Stats */
+.analytics-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.analytics-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+}
+
+.stat-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.stat-icon.purple {
+    background: rgba(139, 92, 246, 0.2);
+}
+
+.stat-icon.green {
+    background: rgba(34, 197, 94, 0.2);
+}
+
+.stat-icon.blue {
+    background: rgba(59, 130, 246, 0.2);
+}
+
+.stat-icon.orange {
+    background: rgba(249, 115, 22, 0.2);
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    line-height: 1;
+}
+
+.stat-label {
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+/* Analytics Grid */
+.analytics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.analytics-card {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 24px;
+}
+
+.analytics-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #f1f5f9;
+    margin: 0 0 20px 0;
+}
+
+.analytics-card.attention {
+    border-color: rgba(239, 68, 68, 0.2);
+}
+
+/* Skill Bars */
+.skill-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.skill-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.skill-bar-icon {
+    font-size: 1.2rem;
+    width: 28px;
+    text-align: center;
+}
+
+.skill-bar-name {
+    width: 100px;
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.skill-bar-track {
+    flex: 1;
+    height: 10px;
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.skill-bar-value {
+    width: 50px;
+    text-align: right;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* Performer List */
+.performer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.performer-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: rgba(15, 23, 42, 0.4);
+    border-radius: 12px;
+}
+
+.performer-rank {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #64748b;
+    width: 28px;
+}
+
+.performer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+}
+
+.performer-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.performer-name {
+    color: #f1f5f9;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.performer-class {
+    color: #64748b;
+    font-size: 0.8rem;
+}
+
+.performer-score {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* Attention List */
+.attention-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.attention-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: rgba(239, 68, 68, 0.05);
+    border: 1px solid rgba(239, 68, 68, 0.1);
+    border-radius: 12px;
+}
+
+.attention-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(239, 68, 68, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #ef4444;
+}
+
+.attention-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.attention-name {
+    color: #f1f5f9;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.attention-score {
+    font-size: 0.8rem;
+}
+
+.btn-help {
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Empty State */
+.empty-analytics {
+    text-align: center;
+    padding: 40px;
+    color: #64748b;
+}
+
+.empty-analytics span {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.empty-analytics.success {
+    color: #22c55e;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .analytics-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .analytics-stats {
+        grid-template-columns: 1fr;
+    }
+}

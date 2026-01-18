@@ -1,0 +1,349 @@
+/* Reading Challenge Styles */
+
+.reading-challenge {
+    min-height: 100vh;
+    background: var(--bg-dark);
+    position: relative;
+}
+
+/* Header */
+.challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-lg) var(--space-xl);
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--frost-primary);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-btn {
+    padding: var(--space-sm) var(--space-md);
+    background: transparent;
+    border: 1px solid var(--frost-primary);
+    color: var(--frost-primary);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: var(--frost-primary);
+    color: var(--bg-dark);
+}
+
+.challenge-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--frost-primary);
+}
+
+.header-spacer {
+    width: 80px;
+}
+
+/* Main Content */
+.challenge-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-xl);
+    position: relative;
+    z-index: 10;
+}
+
+.stage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.stage-title {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+/* Passage Selection */
+.passages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-lg);
+    width: 100%;
+}
+
+.passage-card {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-lg);
+    background: var(--bg-card);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.passage-card:hover {
+    border-color: var(--frost-primary);
+    box-shadow: var(--shadow-frost);
+}
+
+.passage-difficulty {
+    font-size: 0.9rem;
+    margin-bottom: var(--space-sm);
+}
+
+.passage-title {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.passage-preview {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+    flex-grow: 1;
+}
+
+.passage-reward {
+    font-weight: 600;
+    color: var(--gold-primary);
+}
+
+/* Passage Display */
+.passage-display {
+    width: 100%;
+    padding: var(--space-xl);
+    background: var(--bg-card);
+    border-radius: var(--radius-xl);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.passage-display h3 {
+    font-size: 1.3rem;
+    color: var(--frost-primary);
+    margin-bottom: var(--space-lg);
+}
+
+.passage-text {
+    font-size: 1.4rem;
+    line-height: 2;
+    color: var(--text-primary);
+}
+
+.recording-active-display {
+    border-color: var(--fire-primary);
+    box-shadow: var(--shadow-fire);
+}
+
+/* Recording Controls */
+.record-btn {
+    font-size: 1.2rem;
+    padding: var(--space-lg) var(--space-2xl);
+}
+
+.mic-icon {
+    margin-right: var(--space-sm);
+}
+
+.stop-btn {
+    font-size: 1.2rem;
+    padding: var(--space-lg) var(--space-2xl);
+}
+
+/* Recording Indicator */
+.recording-indicator {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+}
+
+.recording-dot {
+    width: 16px;
+    height: 16px;
+    background: var(--fire-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--fire-primary);
+}
+
+.recording-time {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--fire-primary);
+}
+
+/* Analyzing State */
+.stage-container.analyzing {
+    min-height: 60vh;
+    justify-content: center;
+}
+
+.analyzing-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.analyzing-icon {
+    font-size: 4rem;
+}
+
+.analyzing-content h2 {
+    color: var(--frost-primary);
+}
+
+.analyzing-content p {
+    color: var(--text-secondary);
+}
+
+/* Result Stage */
+.result-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.result-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--gold-primary);
+}
+
+.xp-earned {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-xl);
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--gold-primary);
+    box-shadow: var(--shadow-gold);
+}
+
+.xp-icon {
+    font-size: 1.5rem;
+}
+
+.xp-amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gold-primary);
+}
+
+/* Result Breakdown */
+.result-breakdown {
+    display: flex;
+    gap: var(--space-xl);
+    padding: var(--space-lg);
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+}
+
+.result-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.result-stat .stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.result-stat .stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--frost-primary);
+}
+
+/* Diagnosis Card */
+.diagnosis-card {
+    width: 100%;
+    padding: var(--space-xl);
+    background: var(--bg-card);
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.diagnosis-card h3 {
+    font-size: 1.2rem;
+    color: var(--frost-primary);
+    margin-bottom: var(--space-md);
+}
+
+.diagnosis-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-lg);
+}
+
+.gaps-section,
+.recommendations-section {
+    margin-top: var(--space-lg);
+}
+
+.gaps-section h4,
+.recommendations-section h4 {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.diagnosis-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.diagnosis-card li {
+    padding: var(--space-sm) 0;
+    padding-left: var(--space-lg);
+    color: var(--text-secondary);
+    position: relative;
+}
+
+.diagnosis-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--frost-primary);
+}
+
+.gaps-section li::before {
+    content: '⚠';
+    color: var(--warning);
+}
+
+/* Result Actions */
+.result-actions {
+    display: flex;
+    gap: var(--space-md);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .result-breakdown {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .result-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+}

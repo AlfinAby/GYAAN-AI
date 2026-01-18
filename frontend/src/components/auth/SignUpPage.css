@@ -1,0 +1,323 @@
+/* SignUp Page Styles */
+
+.signup-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--bg-dark) 0%, #151515 100%);
+    position: relative;
+    overflow: hidden;
+    padding: var(--space-xl);
+}
+
+.signup-container {
+    width: 100%;
+    max-width: 520px;
+    z-index: 10;
+}
+
+/* Header */
+.signup-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.signup-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+}
+
+.signup-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* Progress Steps */
+.progress-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+}
+
+.step {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 2px solid var(--text-muted);
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.step.active {
+    border-color: var(--gold-primary);
+    background: var(--gold-primary);
+    color: var(--bg-dark);
+}
+
+.step-line {
+    width: 40px;
+    height: 2px;
+    background: var(--text-muted);
+}
+
+/* Step Content */
+.step-content {
+    background: var(--bg-card);
+    padding: var(--space-xl);
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.step-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+/* Role Cards */
+.role-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+}
+
+.role-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-xl);
+    background: var(--bg-secondary);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.role-card.student-card:hover {
+    border-color: var(--frost-primary);
+    box-shadow: var(--shadow-frost);
+}
+
+.role-card.teacher-card:hover {
+    border-color: var(--fire-primary);
+    box-shadow: var(--shadow-fire);
+}
+
+.role-emoji {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+}
+
+.role-card h3 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.role-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+}
+
+.role-id-preview {
+    font-size: 0.75rem;
+    padding: var(--space-xs) var(--space-sm);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    font-family: monospace;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: var(--space-lg);
+}
+
+.form-group label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-sm);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+}
+
+.error-message {
+    padding: var(--space-md);
+    background: rgba(244, 67, 54, 0.15);
+    border: 1px solid var(--error);
+    border-radius: var(--radius-md);
+    color: var(--error);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-lg);
+}
+
+/* ID Preview */
+.id-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-lg);
+}
+
+.preview-label {
+    color: var(--text-secondary);
+}
+
+.preview-id {
+    font-family: monospace;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+}
+
+.preview-id.student {
+    background: rgba(79, 195, 247, 0.2);
+    color: var(--frost-primary);
+    border: 1px solid var(--frost-primary);
+}
+
+.preview-id.teacher {
+    background: rgba(255, 87, 34, 0.2);
+    color: var(--fire-primary);
+    border: 1px solid var(--fire-primary);
+}
+
+/* Step Actions */
+.step-actions {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.step-actions .btn {
+    flex: 1;
+}
+
+/* Success State */
+.success-content {
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 4rem;
+    margin-bottom: var(--space-lg);
+}
+
+.success-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--gold-primary);
+    margin-bottom: var(--space-md);
+}
+
+.success-message {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+}
+
+.generated-id {
+    font-family: monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.generated-id.student {
+    background: rgba(79, 195, 247, 0.2);
+    color: var(--frost-primary);
+    border: 2px solid var(--frost-primary);
+    box-shadow: var(--shadow-frost);
+}
+
+.generated-id.teacher {
+    background: rgba(255, 87, 34, 0.2);
+    color: var(--fire-primary);
+    border: 2px solid var(--fire-primary);
+    box-shadow: var(--shadow-fire);
+}
+
+.success-hint {
+    color: var(--warning);
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+}
+
+.redirecting {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Footer */
+.signup-footer {
+    text-align: center;
+    margin-top: var(--space-xl);
+    color: var(--text-muted);
+}
+
+.login-link {
+    color: var(--frost-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .signup-page {
+        padding: var(--space-md);
+    }
+
+    .role-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .signup-title {
+        font-size: 2.5rem;
+    }
+}

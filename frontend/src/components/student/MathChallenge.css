@@ -1,0 +1,202 @@
+/* Math Challenge Styles - Fire Theme */
+
+.math-challenge {
+    min-height: 100vh;
+    background: var(--bg-dark);
+    position: relative;
+}
+
+/* Fire Header */
+.fire-header {
+    border-bottom-color: var(--fire-primary);
+}
+
+.fire-title {
+    color: var(--fire-primary);
+}
+
+.fire-btn {
+    border-color: var(--fire-primary);
+    color: var(--fire-primary);
+}
+
+.fire-btn:hover {
+    background: var(--fire-primary);
+    color: var(--bg-dark);
+}
+
+/* Problem Grid */
+.problems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+    width: 100%;
+}
+
+.problem-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-xl);
+    background: var(--bg-card);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.problem-card:hover {
+    border-color: var(--fire-primary);
+    box-shadow: var(--shadow-fire);
+}
+
+.problem-difficulty {
+    font-size: 1rem;
+    margin-bottom: var(--space-md);
+}
+
+.problem-equation {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+}
+
+.problem-reward {
+    font-weight: 600;
+    color: var(--gold-primary);
+}
+
+/* Problem Display */
+.problem-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: var(--space-2xl);
+    background: var(--bg-card);
+    border-radius: var(--radius-xl);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.problem-display.recording-active {
+    border-color: var(--fire-primary);
+    box-shadow: var(--shadow-fire);
+}
+
+.problem-equation-large {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--fire-primary);
+    text-shadow: 0 0 20px var(--fire-glow);
+}
+
+/* Stage Instructions */
+.stage-instructions {
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: 400px;
+}
+
+/* Hint Box */
+.hint-box {
+    padding: var(--space-md) var(--space-lg);
+    background: rgba(255, 152, 0, 0.15);
+    border: 1px solid var(--warning);
+    border-radius: var(--radius-md);
+    color: var(--warning);
+}
+
+/* Problem Actions */
+.problem-actions {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.hint-btn {
+    padding: var(--space-md) var(--space-lg);
+    background: transparent;
+    border: 1px solid var(--text-muted);
+    color: var(--text-muted);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hint-btn:hover:not(:disabled) {
+    border-color: var(--warning);
+    color: var(--warning);
+}
+
+.hint-btn:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+/* Steps Guide */
+.steps-guide {
+    padding: var(--space-md) var(--space-lg);
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Fire Themed Results */
+.fire-xp {
+    border-color: var(--fire-primary);
+    box-shadow: var(--shadow-fire);
+}
+
+.fire-value {
+    color: var(--fire-primary) !important;
+}
+
+.fire-card {
+    border-color: rgba(255, 87, 34, 0.3);
+}
+
+.fire-card h3 {
+    color: var(--fire-primary);
+}
+
+/* Correct Answer Display */
+.correct-answer {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    background: rgba(76, 175, 80, 0.15);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-lg);
+}
+
+.answer-label {
+    color: var(--text-secondary);
+}
+
+.answer-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--success);
+}
+
+/* Analyzing with Fire */
+.math-challenge .analyzing-icon {
+    filter: none;
+}
+
+.math-challenge .analyzing-content h2 {
+    color: var(--fire-primary);
+}
+
+/* Fire themed gaps */
+.fire-card .gaps-section li::before {
+    content: '🔥';
+}
+
+.fire-card .recommendations-section li::before {
+    content: '→';
+    color: var(--fire-primary);
+}

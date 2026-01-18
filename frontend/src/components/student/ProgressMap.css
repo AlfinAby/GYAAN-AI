@@ -1,0 +1,246 @@
+/* Subject-Based Progress Map */
+.progress-map {
+    padding: var(--space-xl);
+    background: var(--bg-panel);
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--frost-dim);
+}
+
+.progress-map.locked {
+    position: relative;
+    min-height: 300px;
+}
+
+.map-locked-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 15, 20, 0.95);
+    border-radius: var(--radius-lg);
+    z-index: 10;
+}
+
+.lock-icon {
+    font-size: 4rem;
+    margin-bottom: var(--space-lg);
+}
+
+.map-locked-overlay h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--frost-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.map-locked-overlay p {
+    color: var(--text-muted);
+}
+
+/* Map Header */
+.map-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.map-header h2 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--frost-primary);
+}
+
+.player-stats {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.stat-badge {
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.stat-badge.level {
+    background: linear-gradient(135deg, var(--frost-dim), var(--frost-primary));
+    color: white;
+}
+
+.stat-badge.xp {
+    background: linear-gradient(135deg, #c89b3c, #e8b923);
+    color: #1a1a2e;
+}
+
+/* Subjects Grid */
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-xl);
+}
+
+.subject-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    border: 2px solid var(--border-stone);
+    transition: all 0.3s ease;
+}
+
+.subject-card.unlocked {
+    border-color: var(--subject-color, var(--frost-dim));
+}
+
+.subject-card.unlocked:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.subject-card.locked {
+    opacity: 0.5;
+}
+
+/* Subject Header */
+.subject-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.subject-icon {
+    font-size: 2.5rem;
+}
+
+.subject-header h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    flex: 1;
+}
+
+.lock-badge {
+    font-size: 1.2rem;
+}
+
+/* Progress Bar */
+.subject-progress {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.progress-bar {
+    flex: 1;
+    height: 10px;
+    background: var(--bg-dark);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--subject-color, var(--frost-primary));
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--subject-color, var(--frost-primary));
+    min-width: 40px;
+    text-align: right;
+}
+
+/* Skill List */
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.skill-item.completed {
+    background: rgba(39, 174, 96, 0.15);
+    color: #27ae60;
+}
+
+.skill-item.current {
+    background: rgba(70, 189, 215, 0.15);
+    color: var(--frost-primary);
+    border-left: 3px solid var(--frost-primary);
+}
+
+.skill-item.locked {
+    color: var(--text-muted);
+    opacity: 0.6;
+}
+
+.skill-status {
+    font-size: 0.8rem;
+    width: 20px;
+    text-align: center;
+}
+
+.skill-name {
+    flex: 1;
+}
+
+/* Practice Button */
+.btn-practice {
+    width: 100%;
+    padding: var(--space-md);
+    background: var(--subject-color, var(--frost-primary));
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-family: var(--font-display);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-practice:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Map Footer */
+.map-footer {
+    margin-top: var(--space-xl);
+    text-align: center;
+}
+
+.encouragement {
+    font-size: 1.1rem;
+    color: var(--gold-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .subjects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}

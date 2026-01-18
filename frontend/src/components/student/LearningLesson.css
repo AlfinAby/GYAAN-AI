@@ -1,0 +1,312 @@
+/* Learning Lesson Styles - Dyslexia-friendly design (Akumen) */
+
+.learning-main {
+    padding: var(--space-xl);
+}
+
+/* Akumen Accessibility Bar */
+.accessibility-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--space-md);
+    padding: var(--space-sm) var(--space-lg);
+    background: rgba(70, 189, 215, 0.1);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-xl);
+    font-size: 0.85rem;
+    color: var(--frost-primary);
+}
+
+.btn-speak {
+    padding: var(--space-sm) var(--space-md);
+    background: var(--frost-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-speak:disabled {
+    opacity: 0.6;
+}
+
+.btn-speak:hover:not(:disabled) {
+    filter: brightness(1.1);
+}
+
+.btn-stop {
+    padding: var(--space-sm) var(--space-md);
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.btn-stop:hover {
+    filter: brightness(1.1);
+}
+
+/* Lessons Grid */
+.lessons-grid {
+    text-align: center;
+}
+
+.lessons-grid h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--frost-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.lessons-subtitle {
+    color: var(--text-muted);
+    margin-bottom: var(--space-xl);
+}
+
+.lesson-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+}
+
+.lesson-card {
+    background: var(--bg-card);
+    border: 2px solid var(--border-stone);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.lesson-card.reading {
+    border-color: var(--frost-dim);
+}
+
+.lesson-card.math {
+    border-color: #e85a3c;
+}
+
+.lesson-card.vocabulary {
+    border-color: #27ae60;
+}
+
+.lesson-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.lesson-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+}
+
+.lesson-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.lesson-xp {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-md);
+    background: linear-gradient(135deg, #c89b3c, #e8b923);
+    color: #1a1a2e;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* Lesson Content */
+.lesson-content,
+.practice-content,
+.complete-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.lesson-content h2 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--frost-primary);
+    margin-bottom: var(--space-xl);
+}
+
+.lesson-box,
+.example-box {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    text-align: left;
+}
+
+.lesson-text {
+    /* Akumen: Dyslexia-friendly font size and line height */
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+}
+
+.example-box h3 {
+    color: var(--gold-primary);
+    margin-bottom: var(--space-md);
+}
+
+.example-text {
+    font-size: 1.2rem;
+    line-height: 2;
+    color: var(--text-primary);
+    white-space: pre-wrap;
+    font-family: inherit;
+    /* Akumen: High contrast for readability */
+    background: rgba(70, 189, 215, 0.05);
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
+}
+
+.btn-speak-content {
+    margin-top: var(--space-md);
+    padding: var(--space-sm) var(--space-lg);
+    background: rgba(70, 189, 215, 0.2);
+    border: 1px solid var(--frost-dim);
+    border-radius: var(--radius-sm);
+    color: var(--frost-primary);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-speak-content:hover {
+    background: var(--frost-primary);
+    color: white;
+}
+
+/* Practice */
+.progress-indicator {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-lg);
+}
+
+.practice-question {
+    background: var(--bg-card);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.practice-question p {
+    /* Akumen: Large readable text for young students */
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--space-md);
+}
+
+.option-btn {
+    padding: var(--space-lg);
+    font-size: 1.3rem;
+    background: var(--bg-card);
+    border: 2px solid var(--border-stone);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-btn:hover:not(:disabled) {
+    border-color: var(--frost-primary);
+    background: rgba(70, 189, 215, 0.1);
+}
+
+.option-btn.correct {
+    border-color: #27ae60;
+    background: rgba(39, 174, 96, 0.2);
+    color: #27ae60;
+}
+
+.option-btn.wrong {
+    border-color: #e74c3c;
+    background: rgba(231, 76, 60, 0.2);
+    color: #e74c3c;
+}
+
+.feedback {
+    margin-top: var(--space-xl);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.feedback.correct {
+    background: rgba(39, 174, 96, 0.2);
+    color: #27ae60;
+}
+
+.feedback.wrong {
+    background: rgba(231, 76, 60, 0.2);
+    color: #e74c3c;
+}
+
+/* Complete */
+.complete-icon {
+    font-size: 5rem;
+    margin-bottom: var(--space-lg);
+}
+
+.complete-content h2 {
+    font-family: var(--font-display);
+    color: var(--gold-primary);
+    margin-bottom: var(--space-md);
+}
+
+.xp-earned {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--gold-primary);
+    margin: var(--space-xl) 0;
+}
+
+/* Responsive: Large touch targets for young students */
+@media (max-width: 768px) {
+
+    .lesson-text,
+    .practice-question p {
+        font-size: 1.4rem;
+    }
+
+    .option-btn {
+        padding: var(--space-xl);
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,208 @@
+/* ProgressMap - Premium Styles */
+
+.progress-map {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 24px;
+    margin-top: 20px;
+}
+
+.map-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.map-header h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #f1f5f9;
+    margin: 0;
+}
+
+.student-label {
+    font-size: 0.85rem;
+    color: #64748b;
+    background: rgba(99, 102, 241, 0.1);
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+.map-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* Radar Chart */
+.radar-container {
+    display: flex;
+    justify-content: center;
+}
+
+.radar-chart {
+    width: 280px;
+    height: 280px;
+}
+
+.radar-grid {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 1;
+}
+
+.radar-axis {
+    stroke: rgba(255, 255, 255, 0.05);
+    stroke-width: 1;
+}
+
+.radar-data {
+    stroke-width: 2;
+    transition: all 0.3s;
+}
+
+.radar-label {
+    font-size: 1.2rem;
+    fill: #94a3b8;
+}
+
+.radar-center-score {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Skill Bars */
+.skill-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skill-bar-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.skill-bar-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-bar-header .skill-icon {
+    font-size: 1.1rem;
+}
+
+.skill-bar-header .skill-name {
+    flex: 1;
+    color: #e2e8f0;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.skill-bar-header .skill-grade {
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.skill-bar-track {
+    height: 8px;
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.skill-score-value {
+    font-size: 0.8rem;
+    font-weight: 600;
+    align-self: flex-end;
+}
+
+/* Overall Summary */
+.overall-summary {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    align-items: center;
+}
+
+.overall-grade {
+    width: 80px;
+    height: 80px;
+    border: 3px solid;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.grade-letter {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.grade-label {
+    font-size: 0.65rem;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+.overall-score-bar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.overall-score-bar .score-label {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.score-track {
+    height: 12px;
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.score-fill {
+    height: 100%;
+    border-radius: 6px;
+}
+
+.score-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    align-self: flex-end;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .map-content {
+        grid-template-columns: 1fr;
+    }
+
+    .radar-container {
+        order: 2;
+    }
+
+    .skill-bars {
+        order: 1;
+    }
+}

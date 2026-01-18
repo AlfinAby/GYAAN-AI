@@ -1,0 +1,237 @@
+/* Rage Meter Styles */
+
+.rage-meter-container {
+    background: var(--bg-card);
+    border-radius: var(--radius-xl);
+    padding: var(--space-lg);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease;
+}
+
+.rage-meter-container.rage-ready {
+    border-color: var(--rage-primary);
+    box-shadow: 0 0 30px var(--rage-glow);
+    animation: rage-container-pulse 2s infinite;
+}
+
+@keyframes rage-container-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 30px var(--rage-glow);
+    }
+
+    50% {
+        box-shadow: 0 0 50px var(--rage-glow);
+    }
+}
+
+/* Header */
+.rage-meter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+}
+
+.rage-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.rage-icon {
+    font-size: 1.5rem;
+}
+
+.rage-text {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--rage-primary);
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--rage-glow);
+}
+
+.rage-stats {
+    font-size: 1rem;
+}
+
+.rage-current {
+    font-weight: 700;
+    color: var(--rage-primary);
+}
+
+.rage-divider {
+    color: var(--text-muted);
+    margin: 0 var(--space-xs);
+}
+
+.rage-max {
+    color: var(--text-secondary);
+}
+
+/* Progress Bar */
+.rage-bar-container {
+    position: relative;
+    margin-bottom: var(--space-md);
+}
+
+.rage-bar-bg {
+    width: 100%;
+    height: 20px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    position: relative;
+}
+
+.rage-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg,
+            var(--fire-secondary) 0%,
+            var(--fire-primary) 50%,
+            var(--rage-primary) 100%);
+    border-radius: var(--radius-md);
+    position: relative;
+    transition: width 0.5s ease;
+}
+
+.rage-bar-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.2) 50%,
+            transparent 100%);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.rage-bar-fill.rage-full {
+    animation: rage-pulse 1s infinite;
+}
+
+@keyframes rage-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px var(--rage-glow);
+    }
+
+    50% {
+        box-shadow: 0 0 25px var(--rage-glow);
+    }
+}
+
+.rage-bar-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent 70%,
+            var(--rage-primary) 100%);
+    border-radius: var(--radius-md);
+    pointer-events: none;
+}
+
+/* Milestones */
+.rage-milestones {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.milestone {
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Footer */
+.rage-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rage-reward-info {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.reward-label {
+    color: var(--text-muted);
+}
+
+.reward-value {
+    color: var(--gold-primary);
+    font-weight: 600;
+}
+
+.rage-hint {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.rage-claim-button {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-xl);
+    background: linear-gradient(135deg, var(--rage-primary), var(--fire-primary));
+    border: none;
+    border-radius: var(--radius-md);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 20px var(--rage-glow);
+    animation: claim-pulse 1.5s infinite;
+}
+
+@keyframes claim-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px var(--rage-glow);
+    }
+
+    50% {
+        box-shadow: 0 0 40px var(--rage-glow);
+    }
+}
+
+.claim-icon {
+    font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .rage-footer {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+}

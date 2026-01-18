@@ -1,0 +1,23 @@
+services:
+  gyaan-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    container_name: gyaan-ai-frontend
+    restart: unless-stopped
+
+  gyaan-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    container_name: gyaan-ai-backend
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+    restart: unless-stopped
+    depends_on:
+      - gyaan-frontend
